@@ -9,6 +9,7 @@ RUN apt-get update && \
 # Copy WordPress files into container
 COPY ./wp/ /var/www/html/
 
+
 RUN chown -R www-data:www-data /var/www/html
 
 # Expose port 80

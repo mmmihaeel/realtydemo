@@ -1,7 +1,7 @@
 services:
   - type: web
     name: wordpress-app
-    env: docker
+    env: .
     dockerfilePath: Dockerfiles/WordPress.Dockerfile
     dockerContext: .
     buildCommand: ""

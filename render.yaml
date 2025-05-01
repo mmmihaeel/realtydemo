@@ -5,13 +5,4 @@ services:
     dockerContext: . # This means the root of your repo
     buildCommand: ""
     startCommand: ""
-    envVars:
-      - key: WORDPRESS_DB_HOST
-        value: dpg-d09vre8gjchc73fg3ir0-a.oregon-postgres.render.com
-      - key: WORDPRESS_DB_NAME
-        value: realtydemo_database_y2s4
-      - key: WORDPRESS_DB_USER
-        value: realtydemo
-      - key: WORDPRESS_DB_PASSWORD
-        value: 20OP2y4eF7ZKje1lIfSH6Mlf1BDe0lnL
     plan: free

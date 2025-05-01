@@ -61,6 +61,8 @@ define('DB_PASSWORD', getenv_docker('WORDPRESS_DB_PASSWORD', 'example password')
  * (However, using "example username" and "example password" in your database is strongly discouraged.  Please use strong, random credentials!)
  */
 
+echo getenv_docker('WORDPRESS_DB_HOST', 'mysql');
+
 /** Database hostname */
 define('DB_HOST', getenv_docker('WORDPRESS_DB_HOST', 'mysql'));
 

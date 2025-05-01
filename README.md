@@ -1,14 +1,15 @@
 # RealtyDemo - Etcetera Agency WP Developer Test Task
 
-This repository contains the solution for the Strong Back WP Developer test task provided by Etcetera Agency. The project involves building a WordPress site to manage real estate properties, including custom post types, custom fields, a REST API, AJAX filtering, and Docker integration.
+This repository contains the solution for the Strong Back WP Developer test task provided by Etcetera Agency. The project involves building a WordPress site to manage real estate properties, including custom post types, custom fields, a REST API, AJAX filtering, and Docker integration, with support for both MySQL/MariaDB and **PostgreSQL** databases.
 
 ## Project Overview
 
-The goal of this task was to demonstrate skills in WordPress development, including theme and plugin development, API integration, database management, and modern development workflows using Docker.
+The goal of this task was to demonstrate skills in WordPress development, including theme and plugin development, API integration, database management (supporting multiple database types), and modern development workflows using Docker.
 
 ## Features
 
 - **WordPress Setup:** Standard WordPress installation managed via Docker.
+- **Database Support:** Configurable to run with either MySQL/MariaDB or **PostgreSQL**.
 - **Base Theme:** Utilizes a Bootstrap-based theme (like Understrap or WP Bootstrap Starter).
 - **Child Theme:** A custom child theme (`realtydemo-child`) for all customizations and templates.
 - **Custom Post Type:** `realty_property` (Об'єкт нерухомості) for representing buildings.
@@ -36,18 +37,20 @@ The goal of this task was to demonstrate skills in WordPress development, includ
 - **AJAX Filtering:** A shortcode and widget display a filter form on the frontend. Search results are loaded via AJAX below the filter, displaying 5 items per page with pagination.
 - **Custom Query Sorting:** PHP class modifies the main query for `realty_property` archive/listing pages to sort by the "Eco-Friendliness Rating" ACF field.
 - **Dockerized Environment:** The entire setup runs within Docker containers defined in `docker-compose.yml` and associated Dockerfiles.
+- **(Deployment Config):** Includes `render.yaml` potentially for deployment configurations on Render.com.
 
 ## Technology Stack
 
 - WordPress
 - PHP
-- MySQL / MariaDB (via Docker)
+- Database: MySQL / MariaDB **or PostgreSQL** (via Docker)
 - Docker & Docker Compose
 - Advanced Custom Fields (ACF) Plugin
 - JavaScript / jQuery (for AJAX)
 - HTML5 / CSS3
 - Bootstrap CSS Framework (via base theme)
 - Git
+- PG4WP (PostgreSQL for WordPress) plugin if using PostgreSQL.
 
 ## Project Structure
 
@@ -123,10 +126,10 @@ Detailed API documentation outlining endpoints, request/response formats, filter
 
 ## Credentials for Review
 
-- **Site URL:** ``
-- **WP Admin:** `/wp-admin`
-- **Username:** ``
-- **Password:** ``
+- **Site URL:** `https://realtydemo.onrender.com`
+- **WP Admin:** `https://realtydemo.onrender.com/wp-admin`
+- **Username:** `mmmihaeel`
+- **Password:** `^J%YRYHf1tLBGT9Nk3`
 
 ---
 

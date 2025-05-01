@@ -3,7 +3,7 @@ services:
     name: wordpress-app
     env: docker
     dockerfilePath: Dockerfiles/WordPress.Dockerfile
-    dockerContext: .
+    dockerContext: . # This means the root of your repo
     buildCommand: ""
     startCommand: ""
     envVars:

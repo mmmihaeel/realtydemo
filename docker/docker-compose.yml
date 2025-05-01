@@ -10,7 +10,7 @@ services:
       - 8080:80
     env_file: docker/.env
     environment:
-      WORDPRESS_DB_HOST: "${DATABASE_HOST}:${DATABASE_PORT}"
+      WORDPRESS_DB_HOST: "${DATABASE_HOST}"
       WORDPRESS_DB_NAME: "${DATABASE_NAME}"
       WORDPRESS_DB_USER: "${DATABASE_USER}"
       WORDPRESS_DB_PASSWORD: "${DATABASE_PASSWORD}"

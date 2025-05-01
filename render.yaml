@@ -1,14 +1,13 @@
 services:
   - type: web
     name: wordpress-app
-    env: docker
-    dockerfilePath: docker/Dockerfiles/WordPress.Dockerfile
+    dockerfilePath: ./docker/Dockerfiles/WordPress.Dockerfile
     dockerContext: . # This means the root of your repo
     buildCommand: ""
     startCommand: ""
     envVars:
       - key: WORDPRESS_DB_HOST
-        value: dpg-d09u1sodl3ps7392spbg-a:5432
+        value: dpg-d09u1sodl3ps7392spbg-a.oregon-postgres.render.com
       - key: WORDPRESS_DB_NAME
         value: realtydemo_database
       - key: WORDPRESS_DB_USER

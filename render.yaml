@@ -1,37 +1,18 @@
 services:
   - type: web
-    name: wordpress
+    name: wordpress-app
     env: docker
-    repo: https://github.com/mmmihaeel/realtydemo
-    branch: main
-    dockerContext: docker
     dockerfilePath: Dockerfiles/WordPress.Dockerfile
-    autoDeploy: true
+    dockerContext: .
+    buildCommand: ""
+    startCommand: ""
     envVars:
       - key: WORDPRESS_DB_HOST
-        value: database:3306
+        value: dpg-d09u1sodl3ps7392spbg-a:5432
       - key: WORDPRESS_DB_NAME
-        value: ${MYSQL_DATABASE}
+        value: realtydemo_database
       - key: WORDPRESS_DB_USER
-        value: ${MYSQL_USER}
+        value: realtydemo
       - key: WORDPRESS_DB_PASSWORD
-        value: ${MYSQL_PASSWORD}
+        value: dpg-d09u1sodl3ps7392spbg-a
     plan: free
-
-  - type: pserv
-    name: database
-    env: docker
-    repo: https://github.com/mmmihaeel/realtydemo
-    branch: main
-    dockerContext: docker
-    autoDeploy: false
-    plan: free
-    envVars:
-      - key: MYSQL_ROOT_PASSWORD
-        value: ${MYSQL_ROOT_PASSWORD}
-      - key: MYSQL_DATABASE
-        value: ${MYSQL_DATABASE}
-      - key: MYSQL_USER
-        value: ${MYSQL_USER}
-      - key: MYSQL_PASSWORD
-        value: ${MYSQL_PASSWORD}

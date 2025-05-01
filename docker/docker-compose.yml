@@ -3,19 +3,19 @@ version: "3.8"
 services:
   wordpress:
     build:
-      context: .
-      dockerfile: Dockerfiles/WordPress.Dockerfile
+      context: ../
+      dockerfile: ./docker/Dockerfiles/WordPress.Dockerfile
     restart: unless-stopped
     ports:
       - 8080:80
-    env_file: .env
+    env_file: docker/.env
     environment:
       WORDPRESS_DB_HOST: "${DATABASE_HOST}:${DATABASE_PORT}"
       WORDPRESS_DB_NAME: "${DATABASE_NAME}"
       WORDPRESS_DB_USER: "${DATABASE_USER}"
       WORDPRESS_DB_PASSWORD: "${DATABASE_PASSWORD}"
     volumes:
-      - ./wp:/var/www/html
+      - ../wp:/var/www/html
     networks:
       - wordpress-network
 

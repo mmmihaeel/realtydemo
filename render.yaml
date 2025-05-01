@@ -13,5 +13,5 @@ services:
       - key: WORDPRESS_DB_USER
         value: realtydemo
       - key: WORDPRESS_DB_PASSWORD
-        value: dpg-d09u1sodl3ps7392spbg-a
+        value: yE3P90Riqp5A4GpkZqryBQC6cdFjQxmO
     plan: free

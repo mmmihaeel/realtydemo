@@ -21,7 +21,7 @@ services:
   - type: pserv
     name: database
     env: docker
-    repo: https://github.com/YOUR_USERNAME/YOUR_REPO
+    repo: https://github.com/mmmihaeel/realtydemo
     branch: main
     dockerContext: docker
     autoDeploy: false

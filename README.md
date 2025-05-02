@@ -6,7 +6,7 @@ This repository contains the solution for the Strong Back WP Developer test task
 
 The goal of this task was to demonstrate skills in WordPress development, including theme and plugin development, API integration, database management (supporting multiple database types), and modern development workflows using Docker.
 
-## Features
+## Project Features
 
 - **WordPress Setup:** Standard WordPress installation managed via Docker.
 - **Database Support:** Configurable to run with either MySQL/MariaDB or **PostgreSQL**.

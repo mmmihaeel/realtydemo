@@ -61,8 +61,6 @@ define('DB_PASSWORD', getenv_docker('WORDPRESS_DB_PASSWORD', 'example password')
  * (However, using "example username" and "example password" in your database is strongly discouraged.  Please use strong, random credentials!)
  */
 
-echo getenv_docker('WORDPRESS_DB_HOST', 'mysql');
-
 /** Database hostname */
 define('DB_HOST', getenv_docker('WORDPRESS_DB_HOST', 'mysql'));
 
@@ -122,6 +120,9 @@ $table_prefix = getenv_docker('WORDPRESS_TABLE_PREFIX', 'wp_');
  * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
 define('WP_DEBUG', !!getenv_docker('WORDPRESS_DEBUG', ''));
+
+define('WP_DEBUG_LOG', !!getenv_docker('WORDPRESS_DEBUG_LOG', ''));
+define('WP_DEBUG_DISPLAY', !!getenv_docker('WORDPRESS_DEBUG_DISPLAY', ''));
 
 /* Add any custom values between this line and the "stop editing" line. */
 

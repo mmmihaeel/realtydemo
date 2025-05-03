@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.4.x - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-14 12:08:20+0000\n"
+"PO-Revision-Date: 2025-04-06 13:26:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15035,14 +15035,32 @@ msgstr "https://make.wordpress.org/core/2023/10/23/wordpress-6-4-field-guide/"
 msgid "This is the final release of WordPress %s"
 msgstr "Це останній випуск WordPress %s"
 
-#. translators: The localized WordPress download URL.
-#: wp-admin/about.php:479
-msgid "https://wordpress.org/download/"
-msgstr "https://wordpress.org/download/"
-
 #: wp-admin/customize.php:253
 msgid "<a href=\"https://wordpress.org/documentation/article/customizer/\">Documentation on Customizer</a>"
 msgstr "<a href=\"https://wordpress.org/documentation/article/customizer/\">Документація Налаштовувача</a>"
+
+#: wp-admin/comment.php:72 wp-admin/edit-comments.php:232
+#: wp-admin/edit-form-advanced.php:320 wp-admin/edit-form-advanced.php:338
+#: wp-admin/edit-form-advanced.php:356 wp-admin/edit-link-form.php:77
+#: wp-admin/edit-tags.php:312 wp-admin/edit.php:302 wp-admin/edit.php:327
+#: wp-admin/erase-personal-data.php:66 wp-admin/export-personal-data.php:66
+#: wp-admin/export.php:60 wp-admin/includes/class-custom-background.php:108
+#: wp-admin/includes/class-custom-image-header.php:144 wp-admin/index.php:133
+#: wp-admin/link-manager.php:80 wp-admin/media-new.php:62
+#: wp-admin/my-sites.php:53 wp-admin/nav-menus.php:768
+#: wp-admin/options-discussion.php:33 wp-admin/options-general.php:61
+#: wp-admin/options-media.php:42 wp-admin/options-permalink.php:67
+#: wp-admin/options-reading.php:54 wp-admin/options-writing.php:54
+#: wp-admin/plugin-editor.php:153 wp-admin/plugin-install.php:122
+#: wp-admin/plugins.php:606 wp-admin/revision.php:158
+#: wp-admin/theme-editor.php:56 wp-admin/theme-install.php:158
+#: wp-admin/themes.php:210 wp-admin/tools.php:57 wp-admin/update-core.php:1055
+#: wp-admin/upload.php:199 wp-admin/upload.php:401 wp-admin/user-edit.php:78
+#: wp-admin/user-new.php:302 wp-admin/users.php:84 wp-admin/widgets-form.php:72
+#: wp-admin/network.php:83 wp-admin/network/settings.php:65
+#: wp-admin/network/themes.php:340 wp-admin/network/upgrade.php:33
+msgid "<a href=\"https://wordpress.org/support/forums/\">Support forums</a>"
+msgstr "<a href=\"https://uk.wordpress.org/support/forums/\">Форуми підтримки</a>"
 
 #: wp-admin/contribute.php:48
 msgid "Be part of a global open source community."
@@ -15079,29 +15097,6 @@ msgstr "Детальніше."
 #: wp-admin/includes/class-core-upgrader.php:37
 msgid "Attempting to restore the previous version."
 msgstr "Спроба відновити попередню версію."
-
-#: wp-admin/comment.php:72 wp-admin/edit-comments.php:232
-#: wp-admin/edit-form-advanced.php:320 wp-admin/edit-form-advanced.php:338
-#: wp-admin/edit-form-advanced.php:356 wp-admin/edit-link-form.php:77
-#: wp-admin/edit-tags.php:312 wp-admin/edit.php:302 wp-admin/edit.php:327
-#: wp-admin/erase-personal-data.php:66 wp-admin/export-personal-data.php:66
-#: wp-admin/export.php:60 wp-admin/includes/class-custom-background.php:108
-#: wp-admin/includes/class-custom-image-header.php:144 wp-admin/index.php:133
-#: wp-admin/link-manager.php:80 wp-admin/media-new.php:62
-#: wp-admin/my-sites.php:53 wp-admin/nav-menus.php:768
-#: wp-admin/options-discussion.php:33 wp-admin/options-general.php:61
-#: wp-admin/options-media.php:42 wp-admin/options-permalink.php:67
-#: wp-admin/options-reading.php:54 wp-admin/options-writing.php:54
-#: wp-admin/plugin-editor.php:153 wp-admin/plugin-install.php:122
-#: wp-admin/plugins.php:606 wp-admin/revision.php:158
-#: wp-admin/theme-editor.php:56 wp-admin/theme-install.php:158
-#: wp-admin/themes.php:210 wp-admin/tools.php:57 wp-admin/update-core.php:1055
-#: wp-admin/upload.php:199 wp-admin/upload.php:401 wp-admin/user-edit.php:78
-#: wp-admin/user-new.php:302 wp-admin/users.php:84 wp-admin/widgets-form.php:72
-#: wp-admin/network.php:83 wp-admin/network/settings.php:65
-#: wp-admin/network/themes.php:340 wp-admin/network/upgrade.php:33
-msgid "<a href=\"https://wordpress.org/support/forums/\">Support forums</a>"
-msgstr "<a href=\"https://uk.wordpress.org/support/forums/\">Форуми підтримки</a>"
 
 #: wp-admin/contribute.php:101 wp-admin/credits.php:55 wp-admin/credits.php:63
 msgid "https://make.wordpress.org/contribute/"
@@ -15206,3 +15201,8 @@ msgid_plural "%s patterns moved to the Trash."
 msgstr[0] "%s патерн переміщено до кошика."
 msgstr[1] "%s патерни переміщено до кошика."
 msgstr[2] "%s патернів переміщено до кошика."
+
+#. translators: The localized WordPress download URL.
+#: wp-admin/about.php:479
+msgid "https://wordpress.org/download/"
+msgstr "https://uk.wordpress.org/download/"

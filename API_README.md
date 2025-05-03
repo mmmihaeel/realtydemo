@@ -269,7 +269,7 @@ Permanently deletes a specific `real_estate` property.
 
 ## Testing with `curl`
 
-_(Replace `http://localhost:8080` with your actual WordPress URL if different)_
+_(Replace `http://localhost:8080` with your actual WordPress URL https://realtydemo.onrender.com)_
 
 - **List Objects (GET):**
 

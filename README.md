@@ -165,14 +165,14 @@ REALTYDEMO/
 
 Detailed API documentation outlining endpoints, request/response formats, filtering parameters, and authentication methods should be provided separately.
 
-- _(Placeholder: Link to API documentation file or section)_
+➡️ **[See Full API Documentation](./API_README.md)**
 
 ## Credentials for Review
 
 - **Site URL:** `https://realtydemo.onrender.com`
 - **WP Admin:** `https://realtydemo.onrender.com/wp-admin`
-- **Username:** `mmmihaeel`
-- **Password:** `^J%YRYHf1tLBGT9Nk3`
+- **Username:** `Guest User`
+- **Password:** `Zwl!dBpaSCr*rere9z85mFvg`
 
 ---
 

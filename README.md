@@ -6,7 +6,7 @@ This repository contains the solution for the Strong Back WP Developer test task
 
 The goal of this task was to demonstrate skills in WordPress development, including theme and plugin development, API integration, database management (supporting multiple database types), and modern development workflows using Docker.
 
-## Features
+## Project Features
 
 - **WordPress Setup:** Standard WordPress installation managed via Docker.
 - **Database Support:** Configurable to run with either MySQL/MariaDB or **PostgreSQL**.
@@ -29,15 +29,58 @@ The goal of this task was to demonstrate skills in WordPress development, includ
     - Premises Image (image field)
 - **Custom Plugin (Core Functionality):** Initializes the CPT, Taxonomy, and potentially other core hooks.
 - **Custom Plugin (API):** Implements a REST API endpoint for CRUD operations on `realty_property` posts.
-  - `POST /wp-json/realty/v1/properties`: Create a new property.
-  - `GET /wp-json/realty/v1/properties`: Retrieve properties with filtering capabilities.
-  - `PUT /wp-json/realty/v1/properties/{id}`: Update an existing property.
-  - `DELETE /wp-json/realty/v1/properties/{id}`: Delete a property.
+  - `POST /wp-json/strongback/v1/objects`: Create a new property.
+  - `GET /wp-json/strongback/v1/objects?house_name=...&paged=1`: Retrieve properties with filtering capabilities.
+  - `PUT /wp-json/strongback/v1/objects/{id}`: Update an existing property.
+  - `DELETE /wp-json/strongback/v1/objects/{id}`: Delete a property.
   - _(Bonus)_ Potential XML import functionality.
 - **AJAX Filtering:** A shortcode and widget display a filter form on the frontend. Search results are loaded via AJAX below the filter, displaying 5 items per page with pagination.
 - **Custom Query Sorting:** PHP class modifies the main query for `realty_property` archive/listing pages to sort by the "Eco-Friendliness Rating" ACF field.
 - **Dockerized Environment:** The entire setup runs within Docker containers defined in `docker-compose.yml` and associated Dockerfiles.
 - **(Deployment Config):** Includes `render.yaml` potentially for deployment configurations on Render.com.
+
+---
+
+## 🚀 Project Highlights
+
+1. **Dockerized WP Stack**
+
+   - WordPress (latest) containerized with Docker & docker-compose
+   - Supports MySQL/MariaDB **and** PostgreSQL (via PG4WP driver)
+   - `.env.example` + `docker-compose.yml` for easy “git clone → up” setup
+
+2. **Custom Child Theme**
+
+   - **Theme Name:** StrongBack Theme (child of Understrap / Bootstrap-based starter)
+   - Templates:
+     - `front-page.php` → latest posts + `[sb_filter]` filter form
+     - `single-real_estate.php` → single CPT view with ACF fields & galleries
+     - Archive fallback + standard `page.php` & `single.php`
+
+3. **Custom Plugin: `strongback-realestate`**
+
+   - **CPT:** `real_estate` (“Об’єкт нерухомості”)
+   - **Taxonomy:** `district` (“Район”)
+   - **ACF Fields:**
+     - `house_name`, `location_coords`, `floors_count`, `building_type`, `ecological_rating`
+     - Gallery `images[]`
+     - Repeater `rooms[]` with sub-fields: `room_area`, `room_count`, `has_balcony`, `has_bathroom`, `room_images[]`
+   - **REST API:**
+     - Namespace: `/wp-json/strongback/v1/objects`
+     - GET → list + filters
+     - POST → create (authenticated)
+     - PUT → update (authenticated)
+     - DELETE → delete (authenticated)
+   - **AJAX Filter:**
+     - Shortcode `[sb_filter]` & sidebar Widget
+     - jQuery form → `admin-ajax.php?action=sb_search`
+     - Returns 5 items per page + manual pagination (MySQL & Postgres)
+
+4. **Query Modifier**
+   - Hooks `pre_get_posts` on CPT archive & taxonomy pages
+   - Orders by `ecological_rating` DESC
+
+---
 
 ## Technology Stack
 
